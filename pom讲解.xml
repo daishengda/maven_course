@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!--指定当前的pom版本-->
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>反写的公司网址+项目名</groupId>
+  <artifactId>项目名+模块名</artifactId>
+  <!---第一个0表示大版本号
+		第二个0表示分支版本号
+		第三个0表示小版本号
+		snapshot快照
+		alpha内部测试
+		beta公测
+		Release稳定
+		GA正式发布-->
+  <version>0.0.1-SNAPSHOT</version>
+  <!--默认是jar,
+	  war zip pom maven项目打包的方式-->
+  <packaging>jar</packaging>
+  <!--项目的描述名-->
+  <name>hi</name>
+  <!--项目的地址-->
+  <url>http://maven.apache.org</url>
+  
+  <!--项目的描述-->
+  <description></description>
+  
+  <!--开发人员列表-->
+  <developers></developers>
+  
+  <!--许可证的信息-->
+  <licenses></licenses>
+  
+  <!--组织信息-->
+  <organization></organization>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!--依赖列表-->
+  <dependencies>
+	<!--依赖项-->
+    <dependency>
+	  <!--坐标-->
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+	  <type></type>
+	  <!--依赖的范围,test,junit只在测试的依赖代码中有用，在主代码使用会报错，支持编译、测试、运行
+	  
+	  compile:默认的范围，编译测试运行都有效
+	  provided:在编译和测试时有效，如j2ee的jsp依赖包，需要配置这个避免，部署时运行项目与tomcat冲突
+	  runtime:在测试和运行时有效,jdbc驱动实现
+	  test:	在测试时有效，如junit包
+	  system:与本机系统相关联，可移植性差
+	  import:导入的范围，它只使用在dependencyManagement中，表示从其他的pom中导入dependency的配置
+	  -->
+      <scope>test</scope>
+	  <!--设置依赖是否可选,默认是false(子项是继承的)，true显示子项该依赖-->
+	  <optional>true</optional>
+	  <!--排除依赖传递列表	-->
+	  <exclusions>
+      	<exclusion>
+      		
+      	</exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+  
+  <!---依赖的管理，不会对其进行运行-->
+  <dependencyManagement>
+    <dependencies>
+  		<dependency></dependency>
+  	</dependencies>
+  </dependencyManagement>
+  <!--子模块中对父模块的一个pom的继续-->
+  <parent></parent>	
+  <!--聚合运行多个pom模块-->
+  <modules></modules>
+  <!--为构建提供支持-->
+  <build>
+	<!--插件列表-->
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-source-plugin</artifactId>
+  			<version>2.4</version>
+  			<executions>
+  				<execution>
+  					<phase>package</phase>
+  					<goals>
+  						<goal>jar-no-fork</goal>
+  					</goals>
+  				</execution>
+  			</executions>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>

@@ -1,0 +1,27 @@
+mvn -v 查看maven版本
+
+	compile 编译
+	test 测试
+	package 打包
+	
+	clean 删除target
+	install 安装jar包到本地仓库中
+	
+	创建目录的两种方式(用于创建符号maven规定的目录骨架)
+	1、mvn archetype:generate 按照提示选择
+	2、mvn archetype:generate 
+	   -DgroupId=组织名,公司网址的反写+项目名 
+	   -DartifactId=项目名-模块名 
+	   -Dversion=版本号 
+	   -Dpackage=代码所存在的包名
+		
+		
+	坐标
+		构件
+	仓库
+		本地仓库和远程仓库
+		
+	镜像仓库
+	更改仓库的位置
+
+
